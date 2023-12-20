@@ -1,0 +1,13 @@
+TODO
+Current State:
+
+1. Have a UI built in react to take input
+2. Have DDL and a schema set up in MYSQL. Made a unique user, call-scheduler, with the passsword: "Passw0rd$1$"
+3. Used ant design for the UI
+
+
+Todo: in a nutshell, get data inputted into react into a table that I can do math on in a python script
+
+1. Build an API in Django or Flask to connect to the react app and take data from it
+2. Figure out how to use the database. Firgure out if it's neceesary to write the user
+data to the database and then have python read from that database...

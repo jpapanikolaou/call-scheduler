@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import 'antd/dist/reset.css';
+import PhysicianForm from './components/PhysicianForm';
+import PhysicianList from './components/PhysicianList';
 
-function App() {
+
+const App = () => {
+  const [physicians, setPhysicians] = useState([]);
+
+  const addPhysician = (physician) => {
+    setPhysicians([...physicians, physician]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <PhysicianForm onAddPhysician={addPhysician} />
+      <PhysicianList physicians={physicians} />
     </div>
   );
-}
+};
 
 export default App;
